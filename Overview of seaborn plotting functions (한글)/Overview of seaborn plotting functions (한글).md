@@ -486,7 +486,7 @@ sns.pairplot(data=penguins, hue='species')
 
 내부에서 `axes-level` 함수가 동작하기 때문에 `jointplot()`, `pairplot()`에서도 kind 매개변수를 사용해 시각화 방법을 선택할 수 있습니다.
 
----
+
 
 [^1]: (역자주) axes를 따로 지정해주지 않았을 때 암묵적으로 현재 axes에 그래프를 그리는 방식과 axes를 정확하게 지정하는 방식, 두 가지를 모두 허용하는 것은 matplotlib의 동작 방식과 매우 유사합니다. matplotlib 공식 튜토리얼 [matplotlib usage guide](https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py)를 참고해주세요.
 
