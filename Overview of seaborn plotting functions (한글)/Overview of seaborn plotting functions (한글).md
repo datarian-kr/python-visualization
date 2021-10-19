@@ -239,7 +239,7 @@ sns.displot(data=penguins, x='flipper_length_mm', hue='species', col='species')
 
 Seaborn의 `axes-level` 함수를 이용하면 matplotlib 보다 쉽게 그래프를 그릴 수 있으며, matplotlib의 figure 안에 이 `axes-level` 함수들을 포함시킬수도 있습니다.
 
-`axes-level` 함수들은 내부적으로 `matplotlib.pyplot.gca()` 메소드를 호출하며, 이는 현재 활성화된 axes에 그래프를 그릴 수 있도록 합니다. 또 다른 방법으로, `axes-level` 함수들은 `ax=` 인자를 받아 어떤 위치에 어떤 플롯을 넣을 것인지 정확히 지정할수도 있습니다.<a href="#footnote-1">[1]</a>
+`axes-level` 함수들은 내부적으로 `matplotlib.pyplot.gca()` 메소드를 호출하며, 이는 현재 활성화된 axes에 그래프를 그릴 수 있도록 합니다. 또 다른 방법으로, `axes-level` 함수들은 `ax=` 인자를 받아 어떤 위치에 어떤 플롯을 넣을 것인지 정확히 지정할수도 있습니다.[^1]
 
 
 ```python
@@ -317,7 +317,7 @@ g.set_axis_labels("Flipper length (mm)", "Bill length (mm)")
     
 
 
-이 기능들은 matplotlib API가 아니고 seaborn의 `figure-level` 함수에서만 사용할 수 있는 기능입니다.<a href="#footnote-2">[2]</a>
+이 기능들은 matplotlib API가 아니고 seaborn의 `figure-level` 함수에서만 사용할 수 있는 기능입니다.[^2]
 
 # Specifying figure sizes
 
@@ -353,7 +353,7 @@ sns.histplot(data=penguins, x="species", hue="species", ax=ax)
 
 1. 첫 번째로, 함수가 그래프 사이즈를 조절할 수 있는 매개변수를 가지고 있습니다.
 
-2. 두 번째로, seaborn에서 그래프 사이즈를 조절하는 매개변수 height와 aspect는 matplotlib의 그래프 사이즈 조절 매개변수인 width, height와 약간 다르게 동작합니다.<a href="#footnote-3">[3]</a>
+2. 두 번째로, seaborn에서 그래프 사이즈를 조절하는 매개변수 height와 aspect는 matplotlib의 그래프 사이즈 조절 매개변수인 width, height와 약간 다르게 동작합니다.[^3]
 
 3. 마지막으로, matplotlib이 그래프 전체(figure)단위로 사이즈를 조절하는 것과 다르게, seaborn의 height, aspect와 같이 사이즈를 조절하는 매개변수는 서브플롯 단위의 사이즈를 조절합니다. 
 
@@ -437,7 +437,7 @@ g = sns.FacetGrid(penguins, col='sex', height=3.5, aspect=.75)
 
 앞으로 [seaborn의 튜토리얼](https://seaborn.pydata.org/tutorial/function_overview.html)에서는 `figure-level` 함수를 이용할겁니다. 그리고 여러분들에게도 `figure-level` 함수를 적극 이용할 것을 권장합니다.
 
-만약에 서브플롯이 많은, 복잡한 그래프를 그려야 한다면 matplotlib으로 그래프의 아웃라인을 구성하고 그 안을 seaborn의 `axes-level` 함수를 이용해 채워넣는 방법을 추천합니다.<a href="#footnote-4">[4]</a>
+만약에 서브플롯이 많은, 복잡한 그래프를 그려야 한다면 matplotlib으로 그래프의 아웃라인을 구성하고 그 안을 seaborn의 `axes-level` 함수를 이용해 채워넣는 방법을 추천합니다.[^4]
 
 # Combining multiple views on the data
 
@@ -488,10 +488,10 @@ sns.pairplot(data=penguins, hue='species')
 
 ---
 
-<p id="footnote-1">[1]: (역자주) axes를 따로 지정해주지 않았을 때 암묵적으로 현재 axes에 그래프를 그리는 방식과 axes를 정확하게 지정하는 방식, 두 가지를 모두 허용하는 것은 matplotlib의 동작 방식과 매우 유사합니다. matplotlib 공식 튜토리얼 [matplotlib usage guide](https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py)를 참고해주세요.</p>
+[^1]: (역자주) axes를 따로 지정해주지 않았을 때 암묵적으로 현재 axes에 그래프를 그리는 방식과 axes를 정확하게 지정하는 방식, 두 가지를 모두 허용하는 것은 matplotlib의 동작 방식과 매우 유사합니다. matplotlib 공식 튜토리얼 [matplotlib usage guide](https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py)를 참고해주세요.
 
-<p id="footnote-2">[2]: (역자주) 이런 함수들을 잘 기억해놨다가 쓸 수 있다면 편리하지만, matplotlib API가 아니라 seaborn의 FacetGrid가 독자적으로 제공하는 기능이기 때문에 구글에 검색하거나 문서에서 찾아서 쓰기 불편한 부분이 있는 것 같습니다.</p>
+[^2]: (역자주) 이런 함수들을 잘 기억해놨다가 쓸 수 있다면 편리하지만, matplotlib API가 아니라 seaborn의 FacetGrid가 독자적으로 제공하는 기능이기 때문에 구글에 검색하거나 문서에서 찾아서 쓰기 불편한 부분이 있는 것 같습니다.</p>
 
-<p id="footnote-3">[3]: (역자주) matplotlib의 width(그래프의 가로폭) 매개변수는 seaborn에서 height X aspect로 계산할 수 있습니다. matplotlib은 그래프의 가로폭과 세로폭을 숫자로 지정해주는 방식이고, seaborn은 그래프의 세로폭(height)를 먼저 정의하고 그래프의 가로폭은 세로폭과의 상대적인 길이로 정의하는 방식을 채택했습니다.</p>
+[^3]: (역자주) matplotlib의 width(그래프의 가로폭) 매개변수는 seaborn에서 height X aspect로 계산할 수 있습니다. matplotlib은 그래프의 가로폭과 세로폭을 숫자로 지정해주는 방식이고, seaborn은 그래프의 세로폭(height)를 먼저 정의하고 그래프의 가로폭은 세로폭과의 상대적인 길이로 정의하는 방식을 채택했습니다.</p>
 
-<p id="footnote-4">[4]: (역자주) Axes-level functions make self-contained plots 파트 코드 예시 참고</p>
+[^4]: (역자주) Axes-level functions make self-contained plots 파트 코드 예시 참고</p>
