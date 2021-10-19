@@ -490,8 +490,8 @@ sns.pairplot(data=penguins, hue='species')
 
 [^1]: (역자주) axes를 따로 지정해주지 않았을 때 암묵적으로 현재 axes에 그래프를 그리는 방식과 axes를 정확하게 지정하는 방식, 두 가지를 모두 허용하는 것은 matplotlib의 동작 방식과 매우 유사합니다. matplotlib 공식 튜토리얼 [matplotlib usage guide](https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py)를 참고해주세요.
 
-[^2]: (역자주) 이런 함수들을 잘 기억해놨다가 쓸 수 있다면 편리하지만, matplotlib API가 아니라 seaborn의 FacetGrid가 독자적으로 제공하는 기능이기 때문에 구글에 검색하거나 문서에서 찾아서 쓰기 불편한 부분이 있는 것 같습니다.</p>
+[^2]: (역자주) 이런 함수들을 잘 기억해놨다가 쓸 수 있다면 편리하지만, matplotlib API가 아니라 seaborn의 FacetGrid가 독자적으로 제공하는 기능이기 때문에 구글에 검색하거나 문서에서 찾아서 쓰기 불편한 부분이 있는 것 같습니다.
 
-[^3]: (역자주) matplotlib의 width(그래프의 가로폭) 매개변수는 seaborn에서 height X aspect로 계산할 수 있습니다. matplotlib은 그래프의 가로폭과 세로폭을 숫자로 지정해주는 방식이고, seaborn은 그래프의 세로폭(height)를 먼저 정의하고 그래프의 가로폭은 세로폭과의 상대적인 길이로 정의하는 방식을 채택했습니다.</p>
+[^3]: (역자주) matplotlib의 width(그래프의 가로폭) 매개변수는 seaborn에서 height X aspect로 계산할 수 있습니다. matplotlib은 그래프의 가로폭과 세로폭을 숫자로 지정해주는 방식이고, seaborn은 그래프의 세로폭(height)를 먼저 정의하고 그래프의 가로폭은 세로폭과의 상대적인 길이로 정의하는 방식을 채택했습니다.
 
-[^4]: (역자주) Axes-level functions make self-contained plots 파트 코드 예시 참고</p>
+[^4]: (역자주) Axes-level functions make self-contained plots 파트 코드 예시 참고
